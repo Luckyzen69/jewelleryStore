@@ -42,7 +42,7 @@ import Inside from '../..//assets/inside.jpg'
 
 
     return( <>
-    <div className="max-w-[1400px] h-[780px] w-full m-auto py-16 relative px-4 group">
+    <div className="max-w-[1400px] h-[500px] w-full  m-auto py-3 relative px-4 group">
         <div style={{backgroundImage:`url(${slides[currentIndex].url})`}} className="w-full h-full bg-cover duration-500 rounded-2xl bg-center">
 
         </div>

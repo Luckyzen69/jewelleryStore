@@ -1,6 +1,6 @@
 import React from 'react'
 import Sidebar from './components/sidebar/sidebar'
-import Banner from './components/banner/banner'
+import Home from './components/home/home'
 import './App.css'
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <>
       <div>
         <Sidebar />
-        <Banner/>
+        <Home/>
       </div>
     </>
   )

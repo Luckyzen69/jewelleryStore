@@ -8,11 +8,11 @@ import Necklace from "../../assets/sringar.png"
             
             <div className='sm:flex   sm:justify-between'>
                 <div>
-                <img src={Necklace} alt="logo" className='h-32' />
+                <img src={Necklace} alt="logo" className='h-24' />
                 </div>
-                <div className='space-x-5'>
+                <div className='space-x-2'>
 
-                <p className='underline p-2'>+977 987654321</p>
+                <p className='underline p-1'>+977 987654321</p>
                 <button className='hover:text-slate-700'><BsFillCartFill/></button>
                 <button>Login</button>
                 <button className='border p-2 rounded-md'>Sign in</button>
