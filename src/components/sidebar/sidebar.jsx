@@ -1,6 +1,6 @@
 import SidebarOption from './sidebarOption'
 import { BsFillCartFill } from "react-icons/bs";
-import Necklace from "../../assets/logo.png"
+import Necklace from "../../assets/sringar.png"
     function Sidebar(){
         return (
             <>
