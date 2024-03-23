@@ -3,6 +3,7 @@ import Sidebar from './components/sidebar/sidebar'
 import Home from './components/home/home'
 import Login from './components/UserAuth/login'
 import SignUp from './components/UserAuth/SignUp'
+import ContactUs from './components/home/ContactUs'
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
 function App() {
@@ -19,6 +20,7 @@ function App() {
         </Routes>
 
       </div>
+      <ContactUs/>
     </>
   )
 }
