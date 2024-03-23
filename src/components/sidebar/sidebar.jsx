@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
             
             <div className='sm:flex   sm:justify-between'>
                 <div>
-                <img src={Necklace} alt="logo" className='h-24' />
+                <Link to="/home"><img src={Necklace} alt="logo" className='h-20' /></Link>
                 </div>
                 <div className='space-x-2 '>
 
@@ -23,10 +23,10 @@ import { Link } from 'react-router-dom';
             </div>
                 <Search/>
             <div className='sm:flex sm:justify-center space-x-3'>
-                <SidebarOption  text="Home" />
-                <SidebarOption  text="Products" />
-                <SidebarOption  text="Location" />
-                <SidebarOption  text="Contact Us" />
+               <Link to="/home"> <SidebarOption  text="Home" /></Link>
+               <Link to="/home"> <SidebarOption  text="Products" /></Link>
+               <Link to="/home"> <SidebarOption  text="Location" /></Link>
+               <Link to="/home"> <SidebarOption  text="Contact Us" /></Link>
             </div>
             </section>
             </>
