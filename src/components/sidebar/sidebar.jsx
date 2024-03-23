@@ -1,6 +1,8 @@
 import SidebarOption from './sidebarOption'
 import { BsFillCartFill } from "react-icons/bs";
 import Necklace from "../../assets/sringar.png"
+import Search from '../search/search';
+import { Link } from 'react-router-dom';
     function Sidebar(){
         return (
             <>
@@ -10,14 +12,16 @@ import Necklace from "../../assets/sringar.png"
                 <div>
                 <img src={Necklace} alt="logo" className='h-24' />
                 </div>
-                <div className='space-x-2'>
+                <div className='space-x-2 '>
 
                 <p className='underline p-1'>+977 987654321</p>
                 <button className='hover:text-slate-700'><BsFillCartFill/></button>
-                <button>Login</button>
-                <button className='border p-2 rounded-md'>Sign in</button>
+                <Link to="/login" className='hover:text-slate-450'>Login</Link>
+                <Link to="/signup" className='border p-2 rounded-md'>Sign in</Link>
                 </div>
+
             </div>
+                <Search/>
             <div className='sm:flex sm:justify-center space-x-3'>
                 <SidebarOption  text="Home" />
                 <SidebarOption  text="Products" />
