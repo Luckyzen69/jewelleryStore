@@ -1,6 +1,6 @@
 import SidebarOption from './sidebarOption'
 import { BsFillCartFill } from "react-icons/bs";
-import Necklace from "../../assets/sringar.png"
+import Necklace from "../../assets/logos/sringar.png"
 import Search from '../search/search';
 import { Link } from 'react-router-dom';
 import Category from './../home/category';
@@ -25,7 +25,7 @@ import Category from './../home/category';
                 <Search/>
             <div className='sm:flex sm:justify-center space-x-3'>
                <Link to="/home"> <SidebarOption  text="Home" /></Link>
-               <Link to="/home"> <SidebarOption  text="Products" /></Link>
+               <Link to="/products"> <SidebarOption  text="Products" /></Link>
                <Link to="/home"className='sm:hover:border sm:rounded-sm p-2  text-xl'>  <select name="home" id="home" className="capitalize text-secondary">
             <option value="home" className='hidden' fixed>
               Category

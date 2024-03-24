@@ -1,4 +1,4 @@
-import Inside from '../../assets/inside.jpg'
+import Inside from '../../assets/banner/inside.jpg'
 import Bishal from '../../assets/bishal.jpg'
 export default function AboutUs(){
     return ( 

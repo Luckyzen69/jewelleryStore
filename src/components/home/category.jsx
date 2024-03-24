@@ -1,9 +1,9 @@
-import Braclet from '../../assets/bracelet.jpg'
-import Tilhari from '../../assets/tilhari.jpg'
-import Earring from '../../assets/earring.jpg'
-import Luxury from '../../assets/luxury.jpg'
-import Ring from '../../assets/rings.jpg'
-import Necklace from '../../assets/necklace.jpg'
+import Braclet from '../../assets/category/bracelet.jpg'
+import Tilhari from '../../assets/category/tilhari.jpg'
+import Earring from '../../assets/category/earring.jpg'
+import Luxury from '../../assets/category/luxury.jpg'
+import Ring from '../../assets/category/rings.jpg'
+import Necklace from '../../assets/category/necklace.jpg'
 
 export default function Category(){
     let products = [

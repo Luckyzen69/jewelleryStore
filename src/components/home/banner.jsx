@@ -3,9 +3,9 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import { useState } from "react";
 import { BsDot } from "react-icons/bs";
 
-import Shop from '../../assets/shop.jpg';
-import Necklaces from '../../assets/necklaces.jpg'
-import Inside from '../..//assets/inside.jpg'
+import Shop from '../../assets/banner/shop.jpg';
+import Necklaces from '../../assets/banner/necklaces.jpg'
+import Inside from '../..//assets/banner/inside.jpg'
 
   export default function Banner(){
     const slides= [

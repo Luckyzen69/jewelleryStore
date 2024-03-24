@@ -1,9 +1,11 @@
-  import L1 from '../../assets/l1.jpg'
-  import L2 from '../../assets/l2.jpg'
-  import L3 from '../../assets/l3.jpg'
-  import L4 from '../../assets/l4.jpg'
-  import L5 from '../../assets/l5.jpg'
-
+  import L1 from '../../assets/hotProducts/l1.jpg'
+  import L2 from '../../assets/hotProducts/l2.jpg'
+  import L3 from '../../assets/hotProducts/l3.jpg'
+  import L4 from '../../assets/hotProducts/l4.jpg'
+  import L5 from '../../assets/hotProducts/l5.jpg'
+  import L6 from '../../assets/hotProducts/l6.jpg'
+  import L7 from '../../assets/hotProducts/l7.jpg'
+  import L8 from '../../assets/hotProducts/l8.jpg'
 
   export default function hotProduct(){
     let products = [
@@ -30,6 +32,21 @@
         {
             "title":"Gold Necklace",
             "image":L5,
+            "price":"Rs 809"
+        },
+        {
+            "title":"Golden Necklace",
+            "image":L6,
+            "price":"Rs 809"
+        },
+        {
+            "title":"Gold Necklace",
+            "image":L7,
+            "price":"Rs 809"
+        },
+        {
+            "title":"Gold Necklace",
+            "image":L8,
             "price":"Rs 809"
         },
     ]
