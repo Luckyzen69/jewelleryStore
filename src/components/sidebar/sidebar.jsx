@@ -3,8 +3,16 @@ import { BsFillCartFill } from "react-icons/bs";
 import Necklace from "../../assets/logos/sringar.png"
 import Search from '../search/search';
 import { Link } from 'react-router-dom';
+import { CgMenuRight } from "react-icons/cg";
+import { RxCross2 } from "react-icons/rx";
+import { useState } from 'react';
+import '../../index.css'
 import Category from './../home/category';
     function Sidebar(){
+        const [showSideBar, setShowSideBar] = useState(false);
+        const toggleSidebar = () => {
+            setShowSideBar(!showSideBar);
+        };
         return (
             <>
             <section className='sticky top-0  bg-white'>   
@@ -22,9 +30,21 @@ import Category from './../home/category';
             </nav>
             </section>
 
+            <div className='flex flex-col'>
+
                 <Search/>
 
-            <div className='sm:flex sm:justify-center space-x-3'>
+                <CgMenuRight
+                className={`absolute text-3xl md:hidden duration-75 delay-100 ease-in ${showSideBar ? 'hidden' : ''}`}
+                onClick={toggleSidebar}
+                />
+            <RxCross2
+                className={`absolute  text-3xl md:hidden duration-75 delay-100 ease-out ${showSideBar ? '' : 'hidden'}`}
+                onClick={toggleSidebar}
+                />
+                </div>
+            <div className={`md:flex justify-center space-x-3 md:flex-row md:items-center 	transition-all ${showSideBar ? '' : 'hidden'} `}  >
+            <div id='sidebar ' className='bg-white p-4 sm:1/4 flex flex-col md:flex-row'>
                <Link to="/home"> <SidebarOption  text="Home" /></Link>
                <Link to="/products"> <SidebarOption  text="Products" /></Link>
                <Link to="/home"className='sm:hover:border sm:rounded-sm p-2  text-xl'>  <select name="home" id="home" className="capitalize text-secondary">
@@ -41,6 +61,7 @@ import Category from './../home/category';
           </Link>
                <Link to="/location"> <SidebarOption  text="Location" /></Link>
                <Link to="/aboutus"> <SidebarOption  text="About Us" /></Link>
+            </div>
             </div>
             </>
         )
