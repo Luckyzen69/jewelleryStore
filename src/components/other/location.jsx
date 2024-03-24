@@ -9,7 +9,7 @@ export default function Locations(){
                 <img src={Shop} alt="" />
             </div>
             <div className='m-2 font-serif justify-center flex '>
-                <p className='text-center flex justify-center items-center'>Scan this Qr to get the location of our shop.</p>
+                <p className='text-center flex justify-center items-center'>Scan for location.</p>
                 <img src={L} alt="location qr scan" className='h-46 w-auto' />
             </div>
         </div>
