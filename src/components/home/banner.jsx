@@ -1,6 +1,6 @@
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BsDot } from "react-icons/bs";
 
 import Shop from '../../assets/banner/shop.jpg';
@@ -21,6 +21,9 @@ import Inside from '../..//assets/banner/inside.jpg'
         
     ]
 
+    const autoScroll = true;
+    let slideInterval;
+    let intervalTime = 5000;
     const [currentIndex,setCurrentIndex]=useState(0);
 
     const prevSlide = () => {
@@ -39,6 +42,15 @@ import Inside from '../..//assets/banner/inside.jpg'
         setCurrentIndex(slideIndex);
     };
 
+    function auto(){
+        slideInterval = setInterval(nextSlide, intervalTime)
+    }
+    useEffect(()=>{
+        if(autoScroll){
+            auto();
+        }
+    },[currentIndex])
+
 
 
     return( <>
@@ -46,10 +58,10 @@ import Inside from '../..//assets/banner/inside.jpg'
         <div style={{backgroundImage:`url(${slides[currentIndex].url})`}} className="w-full h-full bg-cover duration-500 rounded-2xl bg-center">
 
         </div>
-        <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 -translate-y-[50%] left-5 text-2xl rounded-full bg-black text-white">
+        <div className="hidden group-hover:block absolute top-[65%] -translate-x-0 -translate-y-[50%] left-5 text-2xl rounded-full bg-black text-white">
             <IoIosArrowRoundBack onClick={prevSlide} size={30}/>
         </div>
-        <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 -translate-y-[50%] right-5 text-2xl rounded-full bg-black text-white">
+        <div className="hidden group-hover:block absolute top-[65%] -translate-x-0 -translate-y-[50%] right-5 text-2xl rounded-full bg-black text-white">
             <IoIosArrowRoundForward onClick={nextSlide} size={30}/>
             </div>
             <div  className="flex top-4 justify-center py-2">

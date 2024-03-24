@@ -14,9 +14,9 @@ import Category from './../home/category';
                 <div className='space-x-2 '>
 
                 <p className='underline p-2 m-2'>+977 987654321</p>
-                <button className='hover:text-slate-700'><BsFillCartFill/></button>
-                <Link to="/login" className='hover:text-slate-450'>Login</Link>
-                <Link to="/signup" className='border p-2 rounded-md'>Sign in</Link>
+                <button className='hover:text-slate-700 text-x  xl'><BsFillCartFill/></button>
+                <Link to="/login" className='hover:text-zinc-700 '>Login</Link>
+                <Link to="/signup" className='border p-2 rounded-md hover:bg-zinc-400 hover:text-white'>Sign In</Link>
                 </div>
 
             </nav>

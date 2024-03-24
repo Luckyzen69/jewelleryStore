@@ -60,7 +60,7 @@
         <div>
             <h3 className='text-3xl font-bold text-center font-mono'>Hot Products</h3>
 
-            <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-2 m-2'>
+            <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-2 m-2 '>
                 {products.map((product,index)=>{
                     let { title, image, price} = product
                     return <>
@@ -68,7 +68,7 @@
                         <img src={image} alt="image" className='h-42 w-auto' />
                         <div className='p-1 m-1 '>
                         <h3 className='font-bold'>{title}</h3>
-                        <p>{price}</p>
+                        {/* <p>{price}</p> */}
                         </div>
                     </div>
                     </Link>
