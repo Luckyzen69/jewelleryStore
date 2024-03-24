@@ -7,22 +7,23 @@ import Category from './../home/category';
     function Sidebar(){
         return (
             <>
-            <section className='m-1'>    
-            <nav className='sm:flex   sm:justify-between sm:sticky sm:top-1 '>
-                <div >
+            <section className='sticky top-0  bg-white'>   
+            <nav className='flex  p-2 justify-between  '>
+              
                 <Link to="/home"><img src={Necklace} alt="logo" className='h-20' /></Link>
-                </div>
                 <div className='space-x-2 '>
 
-                <p className='underline p-1'>+977 987654321</p>
+                <p className='underline p-2 m-2'>+977 987654321</p>
                 <button className='hover:text-slate-700'><BsFillCartFill/></button>
                 <Link to="/login" className='hover:text-slate-450'>Login</Link>
                 <Link to="/signup" className='border p-2 rounded-md'>Sign in</Link>
                 </div>
 
             </nav>
+            </section>
 
                 <Search/>
+
             <div className='sm:flex sm:justify-center space-x-3'>
                <Link to="/home"> <SidebarOption  text="Home" /></Link>
                <Link to="/products"> <SidebarOption  text="Products" /></Link>
@@ -38,10 +39,9 @@ import Category from './../home/category';
             <option value="product">Luxury Collection</option>
           </select>
           </Link>
-               <Link to="/home"> <SidebarOption  text="Location" /></Link>
+               <Link to="/location"> <SidebarOption  text="Location" /></Link>
                <Link to="/aboutus"> <SidebarOption  text="About Us" /></Link>
             </div>
-            </section>
             </>
         )
     }

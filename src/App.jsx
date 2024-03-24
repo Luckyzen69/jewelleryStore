@@ -7,6 +7,7 @@ import ContactUs from './components/home/ContactUs'
 import AboutUs from './components/other/aboutUs'
 import Products from './components/other/products'
 import ProductDetail from './components/other/productDetail'
+import Locations from './components/other/location'
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<Home/>} />
           <Route path="/home" element={<Home/>} />
           <Route path="/products" element={<Products/>} />
+          <Route path="/location" element={<Locations/>} />
           <Route path="/aboutus" element={<AboutUs/>} />
           <Route path="/productdetail" element={<ProductDetail/>} />
           <Route path="/login" element={<Login/>} />
