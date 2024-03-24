@@ -1,6 +1,11 @@
 import L3 from '../../assets/hotProducts/l3.jpg'
+import React, { useEffect, useLayoutEffect } from 'react';
+import { FaCircleInfo } from "react-icons/fa6";
 
 export default function ProductDetail(){
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0); // Scroll to the top of the page on component mount
+      }, []);
     return ( 
         <>
         <div className='grid sm:flex grid-cols-1 m-2'>
@@ -19,7 +24,7 @@ export default function ProductDetail(){
             </div>
               
               <div className='m-2'>
-                <h2 className='font-bold text-xl font-mono'>Product Details</h2>
+                <h2 className='font-bold text-xl font-mono flex' ><FaCircleInfo className='m-1' />Product Details</h2>
                 <p className='font-serif'>Panchadhatu translated from Sanskrit is a term used for a five-metal alloy of sacred importance. <br />
                      The 5 metals consist out of gold, silver, copper, lead or zinc and iron. <br /> These metals are carrying a
                       certain energy which resonance with the body so <br /> it's believed to give balance in life, good health,

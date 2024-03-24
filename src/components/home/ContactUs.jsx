@@ -6,6 +6,7 @@ import { FaLocationDot } from "react-icons/fa6";
 
 
 export default function ContactUs(){
+ 
     return(
         <>
         <div className="bg-black h-96 relative">

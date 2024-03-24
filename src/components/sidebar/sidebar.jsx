@@ -8,9 +8,8 @@ import Category from './../home/category';
         return (
             <>
             <section className='m-1'>    
-            
-            <div className='sm:flex   sm:justify-between'>
-                <div>
+            <nav className='sm:flex   sm:justify-between sm:sticky sm:top-1 '>
+                <div >
                 <Link to="/home"><img src={Necklace} alt="logo" className='h-20' /></Link>
                 </div>
                 <div className='space-x-2 '>
@@ -21,7 +20,8 @@ import Category from './../home/category';
                 <Link to="/signup" className='border p-2 rounded-md'>Sign in</Link>
                 </div>
 
-            </div>
+            </nav>
+
                 <Search/>
             <div className='sm:flex sm:justify-center space-x-3'>
                <Link to="/home"> <SidebarOption  text="Home" /></Link>

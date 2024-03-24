@@ -6,8 +6,13 @@
   import L6 from '../../assets/hotProducts/l6.jpg'
   import L7 from '../../assets/hotProducts/l7.jpg'
   import L8 from '../../assets/hotProducts/l8.jpg'
+  import { Link } from 'react-router-dom'
+  import React, { useEffect, useLayoutEffect } from 'react';
 
   export default function hotProduct(){
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0); // Scroll to the top of the page on component mount
+      }, []);
     let products = [
         {
             "title":"Krishna Necklace",
@@ -58,13 +63,16 @@
             <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-2 m-2'>
                 {products.map((product,index)=>{
                     let { title, image, price} = product
-                    return <div className='m-2 border border-black'>
+                    return <>
+                  <Link to='/productdetail'>  <div className='m-2 border border-black'>
                         <img src={image} alt="image" className='h-42 w-auto' />
                         <div className='p-1 m-1 '>
                         <h3 className='font-bold'>{title}</h3>
                         <p>{price}</p>
                         </div>
                     </div>
+                    </Link>
+                    </>
                 })}
             </div>
         </div>
