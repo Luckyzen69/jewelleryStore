@@ -8,7 +8,7 @@ import L7 from '../../assets/hotProducts/l7.jpg'
 import L8 from '../../assets/hotProducts/l8.jpg'
 import Ring from '../../assets/category/rings.jpg'
 import Earring from '../../assets/category/earring.jpg'
-
+import { Link } from 'react-router-dom'
 export default function Products(){
     let products = [
         {
@@ -70,11 +70,13 @@ export default function Products(){
                 {
                     products.map((product,index)=>{
                         let {title, image ,price} = product;
-                        return <div className='border m-2'>
+                        return <>
+                        <Link to='/productdetail'> <div className='border m-2'>
                             <img src={image} alt="item image" className='h-56 ' />
                             <h2>{title}</h2>
                             <p>{price}</p>
-                        </div>
+                        </div> </Link>
+                        </>
                     })
                 }
             </div>
