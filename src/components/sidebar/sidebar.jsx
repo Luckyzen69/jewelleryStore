@@ -18,7 +18,7 @@ import Category from './../home/category';
             <section className='sticky top-0  bg-white'>   
             <nav className='flex  p-2 justify-between  '>
               
-                <Link to="/home"><img src={Necklace} alt="logo" className='h-20' /></Link>
+                <Link to="/home"><img src={Necklace} alt="logo" className=' h-12  sm:h-20' /></Link>
                 <div className='space-x-2 '>
 
                 <p className='underline p-2 m-2'>+977 987654321</p>
@@ -44,7 +44,7 @@ import Category from './../home/category';
                 />
                 </div>
             <div className={`md:flex justify-center space-x-3 md:flex-row md:items-center 	transition-all ${showSideBar ? '' : 'hidden'} `}  >
-            <div id='sidebar ' className='bg-white p-4 sm:1/4 flex flex-col md:flex-row'>
+            <div id='sidebar ' className='bg-white p-4  flex flex-col md:flex-row'>
                <Link to="/home"> <SidebarOption  text="Home" /></Link>
                <Link to="/products"> <SidebarOption  text="Products" /></Link>
                <Link to="/home"className='sm:hover:border sm:rounded-sm p-2  text-xl'>  <select name="home" id="home" className="capitalize text-secondary">

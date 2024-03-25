@@ -2,6 +2,8 @@ import L3 from '../../assets/hotProducts/l3.jpg'
 import React, { useEffect, useLayoutEffect,useState } from 'react';
 import { FaCircleInfo, FaMinus } from "react-icons/fa6";
 import { FaPlus } from "react-icons/fa6";
+import { CiHeart } from "react-icons/ci";
+import { FaHeart } from "react-icons/fa";
 
 export default function ProductDetail(){
     useLayoutEffect(() => {
@@ -25,7 +27,7 @@ export default function ProductDetail(){
 
       const Cart=(e)=>{
         e.preventDefault();
-        alert(`The product has been placed order.   `)
+        alert(` ${counterValue} product has been placed order.   `)
       }
 
     return ( 
@@ -35,6 +37,17 @@ export default function ProductDetail(){
             <div className='p-2 m-2 sm:ml-12'>
             <h2 className='text-2xl'>Necklaces</h2> 
             <p className='text-xl'>Rs 3000</p> <br /> 
+            {
+
+            }
+             <button
+                className={`absolute text-3xl md:hidden duration-75 delay-100 ease-in ${ CiHeart ? FaHeart : CiHeart}`}
+              
+                />
+      
+            <FaHeart />
+
+
             <div>
                 <h2 className='font-mono text-xl font-bold'>Discription</h2>
                 <ol role='list' className='font-serif'>
@@ -57,7 +70,7 @@ export default function ProductDetail(){
                     <div className='flex'>
 
                 <FaMinus onClick={Minus} className='m-2 border border-black p-3  text-5xl rounded-sm ' />
-                <p className='text-4xl border p-1 m-1 pl-5 pr-5 rounded-sm border-black font-mono w-16'>{counterValue}</p>
+                <p className='text-4xl border p-1 m-1  text-center rounded-sm border-black font-mono w-16'>{counterValue}</p>
                 <FaPlus onClick={Add}  className='m-2 border border-black rounded-sm p-3  text-5xl' />
                     </div>
                 <button onClick={Cart} className='border border-black p-2 rounded-xl bg-slate-700 hover:bg-slate-900 text-bold text-white m-2 sm:w-96'>ADD TO CART</button>

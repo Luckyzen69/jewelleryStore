@@ -59,14 +59,14 @@
     return( 
         <>
         <div>
-            <h3 className='text-3xl font-bold text-center font-mono flex justify-center '>Hot Products<FaDumpsterFire className='m-1 text-red-600'/></h3>
+            <h3 className='text-3xl font-bold text-center font-mono flex justify-center '>Hot Products<FaDumpsterFire className='m-1 text-orange-700 hover:text-red-700'/></h3>
 
-            <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-2 m-2 '>
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-2 m-2 '>
                 {products.map((product,index)=>{
                     let { title, image, price} = product
                     return <>
-                  <Link to='/productdetail'>  <div className='m-2 border border-black'>
-                        <img src={image} alt="image" className='h-42 w-auto' />
+                  <Link to='/productdetail'>  <div className='m-2 border border-black' key={product}>
+                        <img src={image} alt="image" className='h-42 w-auto ' />
                         <div className='p-1 m-1 '>
                         <h3 className='font-bold'>{title}</h3>
                         {/* <p>{price}</p> */}

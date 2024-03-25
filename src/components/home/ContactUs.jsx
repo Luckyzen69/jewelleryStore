@@ -9,12 +9,12 @@ export default function ContactUs(){
  
     return(
         <>
-        <div className="bg-black h-96 relative">
+        <div className="bg-neutral-900 h-96 relative bottom-0">
             <h2 className="text-center text-2xl  font-mono text-white pt-10">Kamla Shringar</h2>
-        <div className="flex text-4xl space-x-10 justify-center text-white m-2 pt-10">
-        <Link to="/" className="border rounded-full p-2 bg-neutral-800"><FaFacebook className="hover:text-neutral-500" /></Link>
-        <Link to="/" className="border rounded-full p-2 bg-neutral-800"><FaInstagram className="hover:text-neutral-500" /></Link>
-        <Link to="/" className="border rounded-full p-2 bg-neutral-800"><FaTiktok className="hover:text-neutral-500" /></Link>
+        <div className="flex text-4xl space-x-10 justify-center text-white m-5 pt-10">
+        <Link to="/" className="hover:border rounded-full p-2 hover:bg-inherit"><FaFacebook  /></Link>
+        <Link to="/" className="hover:border rounded-full p-2 hover:bg-neutral-900"><FaInstagram /></Link>
+        <Link to="/" className="hover:border rounded-full p-2 hover:bg-neutral-900"><FaTiktok   /></Link>
         </div>
 
         <div className="m-2 ">
