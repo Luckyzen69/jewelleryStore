@@ -1,6 +1,10 @@
+import React, { useEffect, useLayoutEffect,useState } from 'react';
 
 
 export default function SignUp(){
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0); // Scroll to the top of the page on component mount
+      }, []);
     return (
         <>
         <div>

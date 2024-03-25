@@ -22,8 +22,7 @@ import Inside from '../..//assets/banner/inside.jpg'
     ]
 
     const autoScroll = true;
-    let slideInterval;
-    let intervalTime = 5000;
+    let slideInterval;  
     const [currentIndex,setCurrentIndex]=useState(0);
 
     const prevSlide = () => {
@@ -43,13 +42,14 @@ import Inside from '../..//assets/banner/inside.jpg'
     };
 
     function auto(){
-        slideInterval = setInterval(nextSlide, intervalTime)
-    }
+        slideInterval = setInterval(nextSlide, 6000)
+    };
+    
     useEffect(()=>{
         if(autoScroll){
             auto();
         }
-    },[currentIndex])
+    },[currentIndex]);
 
 
 

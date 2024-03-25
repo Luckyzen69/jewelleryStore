@@ -1,6 +1,11 @@
+import React, { useEffect, useLayoutEffect,useState } from 'react';
 
 
 export default function Login(){
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0); // Scroll to the top of the page on component mount
+      }, []);
+
     return ( <>
     <div>
         <h2 className="text-center text-2xl font-mono  underline-offset-3 underline">Customer Login</h2>

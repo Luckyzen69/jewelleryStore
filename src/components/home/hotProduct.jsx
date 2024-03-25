@@ -8,6 +8,7 @@
   import L8 from '../../assets/hotProducts/l8.jpg'
   import { Link } from 'react-router-dom'
   import React, { useEffect, useLayoutEffect } from 'react';
+  import { FaDumpsterFire } from "react-icons/fa6";
 
   export default function hotProduct(){
     useLayoutEffect(() => {
@@ -58,7 +59,7 @@
     return( 
         <>
         <div>
-            <h3 className='text-3xl font-bold text-center font-mono'>Hot Products</h3>
+            <h3 className='text-3xl font-bold text-center font-mono flex justify-center '>Hot Products<FaDumpsterFire className='m-1 text-red-600'/></h3>
 
             <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-2 m-2 '>
                 {products.map((product,index)=>{
