@@ -3,9 +3,9 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import { useEffect, useState } from "react";
 import { BsDot } from "react-icons/bs";
 
-import Shop from '../../assets/banner/shop.jpg';
-import Necklaces from '../../assets/banner/necklaces.jpg'
-import Inside from '../..//assets/banner/inside.jpg'
+import Shop from '../../assets/banner/anime.jpg';
+import Necklaces from '../../assets/banner/locket.jpg'
+import Inside from '../..//assets/banner/rings.jpg'
 
   export default function Banner(){
     const slides= [
@@ -58,18 +58,11 @@ import Inside from '../..//assets/banner/inside.jpg'
         <div style={{backgroundImage:`url(${slides[currentIndex].url})`}} className="w-full h-full bg-cover duration-500 rounded-2xl bg-center">
 
         </div>
-        <div className="hidden group-hover:block absolute top-[65%] -translate-x-0 -translate-y-[50%] left-5 text-2xl rounded-full bg-black text-white">
+        <div className="hidden group-hover:block absolute top-[65%] -translate-x-0 -translate-y-[50%] left-5 text-2xl  text-white hover:drop-shadow-lg hover:border">
             <IoIosArrowRoundBack onClick={prevSlide} size={30}/>
         </div>
-        <div className="hidden group-hover:block absolute top-[65%] -translate-x-0 -translate-y-[50%] right-5 text-2xl rounded-full bg-black text-white">
+        <div className="hidden group-hover:block absolute top-[65%] -translate-x-0 -translate-y-[50%] right-5 text-2xl text-white drop-shadow-lg hover:border">
             <IoIosArrowRoundForward onClick={nextSlide} size={30}/>
-            </div>
-            <div  className="flex top-4 justify-center py-2">
-                {slides.map((slide,slideIndex) =>(   
-                    <div key={slideIndex}  onClick={()=>{ goToSlide(slideIndex)}} className="text-3xl cursor-pointer">
-                        <BsDot/>
-                    </div>
-                ))}
             </div>
     </div>
     </>)

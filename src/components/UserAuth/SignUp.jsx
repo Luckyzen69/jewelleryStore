@@ -8,7 +8,7 @@ export default function SignUp(){
     return (
         <>
         <div>
-        <h2 className="text-center text-2xl font-mono  underline-offset-3 underline">Customer SignUp</h2>
+        <h2 className="text-center text-2xl font-mono  ">Customer SignUp</h2>
         <div className="flex justify-center m-5 p-4 ">
             <form className="text-xl flex flex-col " >
                 <label htmlFor="name " className="">Name:</label>

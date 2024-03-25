@@ -16,6 +16,8 @@ export default function ProductDetail(){
       const Add= ()=> {
         setCounterValue(counterValue + 1);
       }
+      const [isClicked,setIsClicked] = useState(false);
+
 
       const Minus = () =>{
        
@@ -40,12 +42,13 @@ export default function ProductDetail(){
             {
 
             }
-             <button
-                className={`absolute text-3xl md:hidden duration-75 delay-100 ease-in ${ CiHeart ? FaHeart : CiHeart}`}
-              
-                />
+             
       
-            <FaHeart />
+             <button onClick={()=>{setIsClicked((prev )=> !prev)}}>
+                {
+                    !isClicked ? ( <CiHeart className='text-2xl'/>) : (<FaHeart className='text-2xl'/>)
+                }
+                </button>
 
 
             <div>
