@@ -41,7 +41,6 @@ export default function ProductDetail(){
                     <li>- Handmade</li>
                     <li>- Material: panchadhatu</li>
                     <li>- Strucutre: solid</li>
-                    <li>- Unisex: for female</li>
                 </ol>
             </div>
               
