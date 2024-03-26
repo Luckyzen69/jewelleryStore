@@ -7,13 +7,35 @@ import L6 from "../../assets/hotProducts/l6.jpg";
 import L7 from "../../assets/hotProducts/l7.jpg";
 import L8 from "../../assets/hotProducts/l8.jpg";
 import { Link } from "react-router-dom";
-import { IoIosArrowRoundBack } from "react-icons/io";
+import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, Component } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
+function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block", background: "red" }}
+        onClick={onClick}
+      />
+    );
+  }
+  
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block", background: "green" }}
+        onClick={onClick}
+      />
+    );
+  }
+  
 export default function hotProduct() {
   useLayoutEffect(() => {
     window.scrollTo(0, 0); // Scroll to the top of the page on component mount
@@ -61,23 +83,40 @@ export default function hotProduct() {
     },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const prevSlide = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  };
-  const nextSlide = () => {
-    const isLastSlide = currentIndex === 0;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-  };
   const settings = {
-    dots: false,
+    focusOnSelect: true,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
   };
   return (
     <>
@@ -87,11 +126,12 @@ export default function hotProduct() {
         </h3>
 
         <Slider {...settings}>
+
           {slides.map((slide, index) => {
-            let { title, image } = slide;
-            return (
-              <>
-                <div className="flex flex-row justify-center text-black items-center ">
+              let { title, image } = slide;
+              return (
+                  <>
+                <div className="flex flex-row justify-center text-black  items-center ">
                   <Link to="/productdetail">
                     <div className="m-2 border border-black   " key={slide}>
                       <div className="p-1 m-2 flex justify-center items-center ">
@@ -100,8 +140,8 @@ export default function hotProduct() {
                       <div className="flex justify-center items-center">
                         <h3 className="font-bold">{title}</h3>
                       </div>
-                    </div>
-                  </Link>
+                        </div>
+                    </Link>
                 </div>
               </>
             );
