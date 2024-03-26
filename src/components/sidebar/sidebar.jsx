@@ -59,15 +59,15 @@ import Category from './../home/category';
                <Link to="/home"> <SidebarOption  text="Home" /></Link>
                {/* <Link to="/products"> <SidebarOption  text="Products" /></Link> */}
                <div onClick={()=>{setIsOpen((prev )=> !prev)}} className='relative hover:border p-2'  onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                            <span className='cursor-pointer font-serif text-xl flex  items-center'>Jewelery<MdKeyboardArrowDown /></span>
+                            <span className='cursor-pointer   flex  items-center hover:text-emerald-600	    '>Jewelery<MdKeyboardArrowDown /></span>
                             {isOpen && (
-                                <div className='sm:absolute bg-white border shadow-md rounded-md p-2 top-11 text-black font-serif sm:w-96'>
-                                    <Link to="/necklace" className='block p-2 '>Necklace</Link>
-                                    <Link to="/bracelets" className='block p-2 '>Bracelets</Link>
-                                    <Link to="/Earrings" className='block p-2 '>Earrings</Link>
-                                    <Link to="/Rings" className='block p-2 '>Rings </Link>
-                                    <Link to="/luxury" className='block p-2 '>Luxury Collections  </Link>
-                                    <Link to="/other" className='block p-2 '>Other </Link>
+                                <div className='sm:absolute bg-white border shadow-md rounded-md p-2 top-11 text-black  sm:w-96'>
+                                    <Link to="/necklaces" className='block p-2 hover:text-emerald-600'>Necklace</Link>
+                                    <Link to="/bracelets" className='block p-2 hover:text-emerald-600'>Bracelets</Link>
+                                    <Link to="/Earrings" className='block p-2  hover:text-emerald-600'>Earrings</Link>
+                                    <Link to="/Rings" className='block p-2 hover:text-emerald-600'>Rings </Link>
+                                    <Link to="/luxury" className='block p-2 hover:text-emerald-600'>Luxury Collections  </Link>
+                                    <Link to="/other" className='block p-2 hover:text-emerald-600'>Other </Link>
                                 </div>
                             )}
                               </div>

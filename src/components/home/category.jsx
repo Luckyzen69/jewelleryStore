@@ -34,7 +34,7 @@ export default function Category(){
     ]
     return( <>
     <div className="max-w-[1400px] h-[800x]  pt-5 m-2">
-        <h2 className="font-bold text-center font-mono  text-2xl">SHOP BY CATEGORY </h2>
+        <h2 className=" text-center font-mono  text-2xl">SHOP BY CATEGORY </h2>
         <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 m-5'>
             {products.map((product,index)=>{
                 let {title , image} = product 

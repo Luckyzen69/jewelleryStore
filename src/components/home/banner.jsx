@@ -37,9 +37,7 @@ import Inside from '../..//assets/banner/rings.jpg'
         setCurrentIndex(newIndex);
 
     };
-    const goToSlide = (slideIndex) =>{
-        setCurrentIndex(slideIndex);
-    };
+
 
     function auto(){
         slideInterval = setInterval(nextSlide, 6000)
@@ -56,7 +54,6 @@ import Inside from '../..//assets/banner/rings.jpg'
     return( <>
     <div className="max-w-[1400px] h-[500px] w-full  m-auto py-3  px-4 group ">
         <div style={{backgroundImage:`url(${slides[currentIndex].url})`}} className="w-full h-full bg-cover duration-500 rounded-2xl bg-center">
-
         </div>
         <div className="hidden group-hover:block absolute top-[65%] -translate-x-0 -translate-y-[50%] left-5 text-2xl  text-white hover:drop-shadow-lg hover:border">
             <IoIosArrowRoundBack onClick={prevSlide} size={30}/>
