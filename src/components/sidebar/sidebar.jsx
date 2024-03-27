@@ -12,7 +12,7 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import '../../index.css'
 import Category from './../home/category';
     function Sidebar(){
-        const [showSideBar, setShowSideBar] = useState(true);
+        const [showSideBar, setShowSideBar] = useState(false);
         const toggleSidebar = () => {
             setShowSideBar(!showSideBar);
         };

@@ -7,8 +7,7 @@ import L6 from "../../assets/hotProducts/l6.jpg";
 import L7 from "../../assets/hotProducts/l7.jpg";
 import L8 from "../../assets/hotProducts/l8.jpg";
 import { Link } from "react-router-dom";
-import { IoIosArrowBack } from "react-icons/io";
-import { IoIosArrowRoundForward } from "react-icons/io";
+
 import React, { useEffect, useLayoutEffect, Component } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -89,8 +88,8 @@ export default function hotProduct() {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    prevArrow: <SamplePrevArrow className="text-2xl" />,
+    nextArrow: <SampleNextArrow className=" text-2xl  " />,
     responsive: [
         {
           breakpoint: 1024,
@@ -125,7 +124,7 @@ export default function hotProduct() {
           Featured Jewels
         </h3>
 
-        <Slider {...settings}>
+        <Slider {...settings} className="m-10">
 
           {slides.map((slide, index) => {
               let { title, image } = slide;
@@ -133,8 +132,8 @@ export default function hotProduct() {
                   <>
                 <div className="flex flex-row justify-center text-black  items-center ">
                   <Link to="/productdetail">
-                    <div className="m-2 border border-black   " key={slide}>
-                      <div className="p-1 m-2 flex justify-center items-center ">
+                    <div className=" border border-black   " key={slide}>
+                      <div className="p-1  flex justify-center items-center ">
                         <img src={image} alt="" className="h-44 w-44 " />
                       </div>
                       <div className="flex justify-center items-center">
