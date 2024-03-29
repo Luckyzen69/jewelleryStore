@@ -1,11 +1,11 @@
-import L1 from "../../assets/hotProducts/l1.jpg";
-import L2 from "../../assets/hotProducts/l2.jpg";
-import L3 from "../../assets/hotProducts/l3.jpg";
-import L4 from "../../assets/hotProducts/l4.jpg";
-import L5 from "../../assets/hotProducts/l5.jpg";
-import L6 from "../../assets/hotProducts/l6.jpg";
-import L7 from "../../assets/hotProducts/l7.jpg";
-import L8 from "../../assets/hotProducts/l8.jpg";
+import L1 from "../../assets/necklaces/neck2.jpg";
+import L2 from "../../assets/rings/ring2.jpg";
+import L3 from "../../assets/bracelets/brace2.jpg";
+import L4 from "../../assets/rings/ring3.jpg";
+import L5 from "../../assets/rings/ring1.jpg";
+import L6 from "../../assets/rings/ring7.jpg";
+import L7 from "../../assets/rings/ring6.jpg";
+import L8 from "../../assets/rings/ring5.jpg";
 import { Link } from "react-router-dom";
 
 import React, { useEffect, useLayoutEffect, Component } from "react";
@@ -124,7 +124,7 @@ export default function hotProduct() {
           Featured Jewels
         </h3>
 
-        <Slider {...settings} className="m-10">
+        <Slider {...settings} className="m-7  ">
 
           {slides.map((slide, index) => {
               let { title, image } = slide;
@@ -134,7 +134,7 @@ export default function hotProduct() {
                   <Link to="/productdetail">
                     <div className=" border border-black   " key={slide}>
                       <div className="p-1  flex justify-center items-center ">
-                        <img src={image} alt="" className="h-44 w-44 " />
+                        <img src={image} alt="" className="h-auto w-auto " />
                       </div>
                       <div className="flex justify-center items-center">
                         <h3 className="font-bold">{title}</h3>
