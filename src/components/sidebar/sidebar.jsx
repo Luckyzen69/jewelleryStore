@@ -73,7 +73,7 @@ import Category from './../home/category';
                               </div>
                <Link to="/location"> <SidebarOption  text="Location" /></Link>
                <Link to="/aboutus"> <SidebarOption  text="About" /></Link>
-               <Link to="/aboutus"> <SidebarOption  text="Contact" /></Link>
+               <Link to="/contact"> <SidebarOption  text="Contact" /></Link>
               
             </div>
             </div>

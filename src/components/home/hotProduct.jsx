@@ -18,7 +18,7 @@ function SampleNextArrow(props) {
     return (
       <div
         className={className}
-        style={{ ...style, display: "block", background: "red" }}
+        style={{ ...style, display: "block", background: "black" }}
         onClick={onClick}
       />
     );
@@ -29,7 +29,7 @@ function SampleNextArrow(props) {
     return (
       <div
         className={className}
-        style={{ ...style, display: "block", background: "green" }}
+        style={{ ...style, display: "block", background: "black" }}
         onClick={onClick}
       />
     );
@@ -88,8 +88,8 @@ export default function hotProduct() {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    prevArrow: <SamplePrevArrow className="text-2xl" />,
-    nextArrow: <SampleNextArrow className=" text-2xl  " />,
+    prevArrow: <SamplePrevArrow  />,
+    nextArrow: <SampleNextArrow  />,
     responsive: [
         {
           breakpoint: 1024,

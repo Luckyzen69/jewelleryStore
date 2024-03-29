@@ -14,6 +14,7 @@ import Necklaces from './components/category/necklace'
 import Rings from './components/category/ring'
 import Earrings from './components/category/earring'
 import OtherItems from './components/category/other'
+import Contact from './components/other/contact'
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="/products" element={<Products/>} />
           <Route path="/location" element={<Locations/>} />
           <Route path="/aboutus" element={<AboutUs/>} />
+          <Route path="/contact" element={<Contact/>} />
           <Route path="/productdetail" element={<ProductDetail/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/signup" element={<SignUp/>} />
