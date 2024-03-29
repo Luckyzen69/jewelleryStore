@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom'
 import Neck1 from "../../assets/necklaces/neck1.jpg"
 import Neck2 from "../../assets/necklaces/neck2.jpg"
 import Neck3 from "../../assets/necklaces/neck3.jpg"
+import Neck4 from "../../assets/necklaces/neck4.jpg"
+import Neck5 from "../../assets/necklaces/neck5.jpg"
+import Neck6 from "../../assets/necklaces/neck6.jpg"
+import Neck7 from "../../assets/necklaces/neck7.jpg"
 export default function Necklaces() {
   let necklaces =[
     {
@@ -19,6 +23,26 @@ export default function Necklaces() {
     {
       "name": "gold necklace",
       "image" : Neck3,
+      "price" : 200
+    },
+    {
+      "name": "gold necklace",
+      "image" : Neck4,
+      "price" : 200
+    },
+    {
+      "name": "gold necklace",
+      "image" : Neck5,
+      "price" : 200
+    },
+    {
+      "name": "gold necklace",
+      "image" : Neck6,
+      "price" : 200
+    },
+    {
+      "name": "gold necklace",
+      "image" : Neck7,
       "price" : 200
     },
   ]

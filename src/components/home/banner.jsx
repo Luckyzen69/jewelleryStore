@@ -3,7 +3,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import { useEffect, useState } from "react";
 import { BsDot } from "react-icons/bs";
 
-import Shop from '../../assets/banner/anime.jpg';
+import Shop from '../../assets/banner/asthetic.jpg';
 import Necklaces from '../../assets/banner/locket.jpg'
 import Inside from '../..//assets/banner/rings.jpg'
 
