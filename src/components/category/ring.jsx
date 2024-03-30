@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useLayoutEffect } from 'react';
 import Shopby from "./shop/shopby";
 import Ring1 from "../../assets/rings/ring1.jpg"
 import Ring2 from "../../assets/rings/ring2.jpg"
@@ -44,7 +44,12 @@ export default function Rings() {
       "image" : Ring7,
       "price" : 2000
     },
-  ]
+  ]  
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page on component mount
+  }, []);
+  
   return (
     <>
       <div className="h-[1080px] flex m-2">

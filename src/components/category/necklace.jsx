@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useLayoutEffect } from 'react';
 import Shopby from './shop/shopby'
 import { Link } from 'react-router-dom'
 import Neck1 from "../../assets/necklaces/neck1.jpg"
@@ -46,6 +46,11 @@ export default function Necklaces() {
       "price" : 200
     },
   ]
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page on component mount
+  }, []);
+  
   return (
    <>
    <div className='h-[1080px] flex m-2'>

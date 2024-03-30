@@ -18,7 +18,7 @@ export default function ContactUs(){
         </div>
 
         <div className="m-2 ">
-        <p className="text-white flex text-xl underline m-1 hover:text-neutral-600"><MdEmail className="m-1" />:Bishal@gmail.com</p>
+        <p className="text-white flex text-xl underline m-1 hover:text-neutral-600"><MdEmail className="m-1" />:KamlaSringar@gmail.com</p>
         <p className="text-white flex text-xl m-3 underline hover:text-neutral-600"><FaPhoneAlt />:987654321</p>
         <p className="text-white flex m-3"><FaLocationDot className="text-xl"/>: Golfutar, Budhanilkantha. <br />Attached to  Big Mart</p>
 

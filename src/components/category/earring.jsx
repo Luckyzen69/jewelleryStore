@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useLayoutEffect } from 'react';
 import Shopby from './shop/shopby';
 import Ear1 from '../../assets/earrings/ear1.jpg'
 import Ear2 from '../../assets/earrings/ear2.jpg'
@@ -21,6 +21,10 @@ export default function Earrings() {
       "price" : 1200
     },
   ]
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page on component mount
+  }, []);
+  
   return (
    <>
    <div className='h-[1080px] flex m-2'>

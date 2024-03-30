@@ -1,6 +1,10 @@
 import React from 'react'
+import  { useEffect, useLayoutEffect } from 'react';
 
 export default function contact() {
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0); // Scroll to the top of the page on component mount
+      }, []);
   return (
     <>
     <div className='h-[600px]'>

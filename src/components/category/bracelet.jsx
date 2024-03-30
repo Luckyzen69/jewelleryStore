@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useLayoutEffect } from 'react';
 import Shopby from './shop/shopby'
 import Brace1 from "../../assets/bracelets/brace1.jpg"
 import Brace2 from "../../assets/bracelets/brace2.jpg"
@@ -26,7 +26,11 @@ export default function Bracelets() {
       "image" : Brace4,
       "price" : 200
     },
-  ]
+  ]  
+  
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page on component mount
+  }, []);
   return (
    <>
    <div className='h-[1080px] flex m-2'>

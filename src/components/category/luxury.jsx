@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useLayoutEffect } from 'react';
 import Shopby from './shop/shopby'
 import Lux1 from '../../assets/luxury/lux1.jpg'
 import Lux2 from '../../assets/luxury/lux2.jpg'
@@ -36,6 +36,11 @@ export default function Luxury() {
       },
 
   ]
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page on component mount
+  }, []);
+  
   return (
    <>
    <div className='h-[1080px] flex m-2'>

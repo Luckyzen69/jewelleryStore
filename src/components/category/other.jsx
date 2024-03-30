@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useLayoutEffect } from 'react';
 import Shopby from './shop/shopby'
 import Other1 from '../../assets/other/other1.jpg'
 import Other2 from '../../assets/other/other2.jpg'
@@ -26,7 +26,10 @@ export default function OtherItems() {
         "image" : Other4,
         "price" : 3200
     },
-  ]
+  ]  
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page on component mount
+  }, []);
   return (
    <>
    <div className='h-[1080px] flex m-2'>

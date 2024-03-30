@@ -1,8 +1,13 @@
 import L from '../../assets/location.png'
 import { ImLocation2 } from "react-icons/im";
+import  { React, useEffect, useLayoutEffect } from 'react';
 
 import Shop from '../../assets/banner/shop.jpg'
+
 export default function Locations(){
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0); // Scroll to the top of the page on component mount
+      }, []);
     return (
         <>
         <div className='m-2 p-2'>
