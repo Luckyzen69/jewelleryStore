@@ -4,8 +4,10 @@ import { FaCircleInfo, FaMinus } from "react-icons/fa6";
 import { FaPlus } from "react-icons/fa6";
 import { CiHeart } from "react-icons/ci";
 import { FaHeart } from "react-icons/fa";
-
+import ProductData from "./productData"
 export default function ProductDetail(){
+
+  const [datas , setData] = useState(ProductData);
     useLayoutEffect(() => {
         window.scrollTo(0, 0); // Scroll to the top of the page on component mount
       }, []);
@@ -32,23 +34,22 @@ export default function ProductDetail(){
         alert(` ${counterValue} product has been placed order.   `)
       }
 
+
     return ( 
         <>
-        <div className='grid sm:flex grid-cols-1 m-2'>
-            <img src={L3} alt="" className='h-96' />
+      
+         <div className='grid sm:flex grid-cols-1 m-2'> 
+           <img src={L3} alt="" className='h-96' />
             <div className='p-2 m-2 sm:ml-12'>
             <h2 className='text-2xl'>Necklaces</h2> 
             <p className='text-xl'>Rs 3000</p> <br /> 
+            
+            
+            <button onClick={()=>{setIsClicked((prev )=> !prev)}}>
             {
-
+              !isClicked ? ( <CiHeart className='text-2xl'/>) : (<FaHeart className='text-2xl'/>)
             }
-             
-      
-             <button onClick={()=>{setIsClicked((prev )=> !prev)}}>
-                {
-                    !isClicked ? ( <CiHeart className='text-2xl'/>) : (<FaHeart className='text-2xl'/>)
-                }
-                </button>
+            </button>
 
 
             <div>
@@ -80,7 +81,7 @@ export default function ProductDetail(){
                 </form>
             </div>
             </div>
-        </div>
+        </div> 
         </>
     )
 }
